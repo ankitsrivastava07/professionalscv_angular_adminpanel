@@ -17,15 +17,16 @@
   
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Articles
+              Blogs
           </a>
+                    
+          <!-- //Create Own Blog Page for the user and can share with other people to read blog.-->
+
           <div  class="dropdown-menu" aria-labelledby="dropdownMenuLink">
             <li>
-              <hr><a class="dropdown-item" href="">Add Category </a>
-              <hr><a class="dropdown-item" href="">Add Category </a>
-
-              <hr><a class="dropdown-item" href="">Add Category </a>
-
+              <hr><a class="dropdown-item" href="">Create your own blog </a>
+              <hr><a class="dropdown-item" href="">Available Blogs </a>
+              <hr><a class="dropdown-item" href="">Trending Blogs </a>
             </li>
           </div>
         </li>
@@ -33,10 +34,43 @@
         <li class="nav-item">
           <a class="nav-link" href="/learn-spring-boot">Learn Spring Boot</a>
         </li>
-  
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Trending News
+          </a>
+                    
+          <!-- //Create Own Blog Page for the user and can share with other people to read blog.-->
+
+          <div  class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li>
+              <hr><a class="dropdown-item" href="">Create your own blog </a>
+              <hr><a class="dropdown-item" href="">Available Blogs </a>
+              <hr><a class="dropdown-item" href="">Trending Blogs </a>
+            </li>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/learn-java">Learn Java</a>
+        </li>
+
+        <li class="nav-item dropdown" data-bs-auto-close="outside">
+          <a class="nav-link dropdown-toggle" (click)="getAllCategories($event)" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" data-bs-auto-close="outside">
+              Take Quiz
+          </a>
+                    
+          <div *ngIf="takeQuizFlag" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li *ngFor="let category of categories">
+              <hr><a class="dropdown-item" href="">Create your own blog </a>
+              <hr><a class="dropdown-item" href="" (click)="getAllCategories($event)" [id]="category.id">{{category.name}} </a>
+            </li>
+          </div>
+        </li>
+
         <li class="nav-item">
           <a class="nav-link" href="/contact-us">Contact Us</a>
         </li>
+
       </ul>
     </div>
   </nav>

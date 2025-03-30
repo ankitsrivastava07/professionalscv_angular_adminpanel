@@ -7,6 +7,10 @@ import { HeaderComponent } from './header/header.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { IndexComponent } from './index/index.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { SignupComponent } from './signup/signup.component';
+import { HomeComponent } from './home/home.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,11 +18,15 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     HeaderComponent,
     SignInComponent,
     IndexComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    NotFoundComponent,
+    SignupComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [IndexComponent]
